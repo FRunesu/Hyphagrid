@@ -29,7 +29,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#top" className="font-display text-xl font-semibold tracking-tight">
-          Runesu<span className="text-accent">.</span>Digital
+          Hypha<span className="text-accent">grid</span>
         </a>
         <div className="hidden items-center gap-8 text-sm font-medium md:flex">
           {links.map((l) => (
