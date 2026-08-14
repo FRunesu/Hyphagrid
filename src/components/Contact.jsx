@@ -33,10 +33,10 @@ export default function Contact() {
       <footer className="mt-24 border-t border-white/10 pt-8">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-white/50 md:flex-row">
           <p>
-            Runesu<span className="text-accent">.</span>Digital — Websites · Marketing · AI Chatbots ·
+            Hypha<span className="text-accent">grid</span> — Websites · Marketing · AI Chatbots ·
             Data Analytics
           </p>
-          <p>© {new Date().getFullYear()} Runesu Digital. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Hyphagrid. All rights reserved.</p>
         </div>
       </footer>
     </section>
