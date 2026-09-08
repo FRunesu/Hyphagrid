@@ -133,14 +133,18 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.6 }}
-            className="group relative flex flex-col overflow-hidden rounded-3xl border border-ink/10 bg-white p-7 transition-shadow hover:shadow-xl"
+            className="group flex flex-col overflow-hidden rounded-3xl border border-ink/10 transition-all hover:shadow-2xl"
           >
-            {/* Hero background image */}
+            {/* Hero image as background preview */}
             <div
-              className="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity group-hover:opacity-10 duration-300"
+              className="relative h-40 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
               style={{ backgroundImage: `url('${w.hero}')` }}
-            />
-            <div className="relative z-10">
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+            </div>
+
+            {/* Content section */}
+            <div className="flex flex-1 flex-col bg-white p-7">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">{w.tag}</p>
               <h4 className="mt-3 font-display text-xl font-medium">{w.name}</h4>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/70">{w.blurb}</p>
