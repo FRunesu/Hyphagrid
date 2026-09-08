@@ -16,6 +16,21 @@ const kpis = [
   { value: '12', label: 'Live dashboards shipped', delta: 'InnBucks & SPAR Zimbabwe' },
 ]
 
+const companies = [
+  {
+    name: 'InnBucks',
+    logo: '💳',
+    description: 'Mobile Money',
+    color: 'from-blue-500 to-blue-600',
+  },
+  {
+    name: 'SPAR Zimbabwe',
+    logo: '🛒',
+    description: 'Retail & FMCG',
+    color: 'from-red-500 to-red-600',
+  },
+]
+
 export default function Analytics() {
   return (
     <section id="analytics" className="bg-ink py-24 text-white md:py-32">
@@ -36,7 +51,7 @@ export default function Analytics() {
             <p className="mt-5 text-lg text-white/70">
               Finally — anyone in your business can get insights grounded in the facts of your own
               data. We build pipelines, semantic models and dashboards that answer questions like
-              “what sold best last quarter, and where?” in seconds, not weeks.
+              "what sold best last quarter, and where?" in seconds, not weeks.
             </p>
             <ul className="mt-8 space-y-4 text-white/80">
               {[
@@ -50,6 +65,32 @@ export default function Analytics() {
                 </li>
               ))}
             </ul>
+
+            {/* Companies we've worked with */}
+            <div className="mt-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-soft">
+                Companies we've worked with
+              </p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {companies.map((company, i) => (
+                  <motion.div
+                    key={company.name}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, margin: '-60px' }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    className={`bg-gradient-to-br ${company.color} flex items-center gap-3 rounded-2xl px-5 py-3 transition-all hover:scale-105 hover:shadow-lg`}
+                  >
+                    <span className="text-2xl">{company.logo}</span>
+                    <div>
+                      <p className="text-sm font-semibold">{company.name}</p>
+                      <p className="text-xs opacity-90">{company.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
             <a
               href="#projects"
               className="mt-10 inline-block rounded-full bg-white px-7 py-3 text-sm font-semibold text-ink transition-colors hover:bg-accent hover:text-white"
