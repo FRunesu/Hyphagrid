@@ -9,6 +9,7 @@ const websites = [
     tag: 'Staffing & Outsourcing',
     blurb:
       'Corporate site for a virtual staffing company connecting businesses with reliable remote teams and virtual staff solutions.',
+    hero: './hero/retail.jpg',
   },
   {
     name: 'Omnyx Labs',
@@ -16,6 +17,7 @@ const websites = [
     tag: 'AI Platform',
     blurb:
       'Documentation and product site for a personality-intelligence platform that helps AI agents adapt to how each user works.',
+    hero: './hero/construction.jpg',
   },
   {
     name: 'Mudhumeni (M.A.L)',
@@ -23,6 +25,7 @@ const websites = [
     tag: 'AgriTech',
     blurb:
       'Landing site for an AI-driven smart greenhouse platform — IoT sensors, edge AI and dashboards acting as a digital extension officer for farmers.',
+    hero: './hero/retail.jpg',
   },
   {
     name: 'FieldForce Agro Services',
@@ -30,13 +33,15 @@ const websites = [
     tag: 'Agrochemicals',
     blurb:
       'Full company website for an agrochemical supplier — services, product catalogues, crop guides, gallery and advisory request forms.',
+    hero: './hero/construction.jpg',
   },
   {
     name: 'Mundia & Mudhara Legal Practitioners',
     url: 'https://mundia-and-mudhara-legal-practition.vercel.app/',
     tag: 'Law Firm',
     blurb:
-      'Elegant website for a Harare commercial law firm — practice areas, team profiles and a professional presence that reflects the firm’s standing.',
+      'Elegant website for a Harare commercial law firm — practice areas, team profiles and a professional presence that reflects the firm's standing.',
+    hero: './hero/law.jpg',
   },
 ]
 
@@ -45,11 +50,11 @@ const caseStudies = [
     name: 'InnBucks',
     tag: 'Fintech · Mobile Money',
     summary:
-      'Transaction analytics for one of Zimbabwe’s fastest-growing mobile money services.',
+      'Transaction analytics for one of Zimbabwe's fastest-growing mobile money services.',
     challenge:
-      'Millions of wallet transactions across agents and branches, but reporting lived in slow, manual spreadsheets. Leadership couldn’t see daily patterns, agent performance or unusual activity fast enough to act.',
+      'Millions of wallet transactions across agents and branches, but reporting lived in slow, manual spreadsheets. Leadership couldn't see daily patterns, agent performance or unusual activity[...]',
     solution:
-      'We built an automated analytics pipeline and dashboard suite: daily transaction volumes and values, branch and agent drill-downs, customer activity cohorts, and anomaly flags for unusual transaction patterns.',
+      'We built an automated analytics pipeline and dashboard suite: daily transaction volumes and values, branch and agent drill-downs, customer activity cohorts, and anomaly flags for unusual tr[...]',
     results: [
       'Reporting cycle cut from days to minutes with automated daily dashboards',
       'Agent and branch performance visible at a glance, enabling targeted support',
@@ -64,7 +69,7 @@ const caseStudies = [
     challenge:
       'Store-level POS data existed in silos, making it hard to compare stores, spot fast- and slow-moving lines, or plan stock around demand patterns and seasonality.',
     solution:
-      'We consolidated POS and inventory data into a single model with dashboards covering sales by store, category and product line, basket analysis, and stock-movement views that highlight overstocking and stockout risks.',
+      'We consolidated POS and inventory data into a single model with dashboards covering sales by store, category and product line, basket analysis, and stock-movement views that highlight overs[...]',
     results: [
       'Single view of sales across stores, categories and time periods',
       'Fast/slow-moving product lines identified, informing promotions and ordering',
@@ -87,7 +92,7 @@ export default function Projects() {
       >
         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-accent">Projects</p>
         <h2 className="mt-4 font-display text-4xl font-medium leading-tight md:text-5xl">
-          Work we’ve shipped
+          Work we've shipped
         </h2>
       </motion.div>
 
@@ -128,15 +133,22 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.6 }}
-            className="group flex flex-col rounded-3xl border border-ink/10 bg-white p-7 transition-shadow hover:shadow-xl"
+            className="group relative flex flex-col overflow-hidden rounded-3xl border border-ink/10 bg-white p-7 transition-shadow hover:shadow-xl"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">{w.tag}</p>
-            <h4 className="mt-3 font-display text-xl font-medium">{w.name}</h4>
-            <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/70">{w.blurb}</p>
-            <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-ink">
-              Visit site
-              <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </span>
+            {/* Hero background image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity group-hover:opacity-10 duration-300"
+              style={{ backgroundImage: `url('${w.hero}')` }}
+            />
+            <div className="relative z-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">{w.tag}</p>
+              <h4 className="mt-3 font-display text-xl font-medium">{w.name}</h4>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/70">{w.blurb}</p>
+              <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-ink">
+                Visit site
+                <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
+            </div>
           </motion.a>
         ))}
       </div>
