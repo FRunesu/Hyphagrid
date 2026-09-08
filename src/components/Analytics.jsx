@@ -16,18 +16,18 @@ const kpis = [
   { value: '12', label: 'Live dashboards shipped', delta: 'InnBucks & SPAR Zimbabwe' },
 ]
 
-const companies = [
+const analyticsCompanies = [
   {
     name: 'InnBucks',
+    industry: 'Fintech · Mobile Money',
     logo: '💳',
-    description: 'Mobile Money',
-    color: 'from-blue-500 to-blue-600',
+    bgColor: 'from-blue-600 to-blue-700',
   },
   {
     name: 'SPAR Zimbabwe',
+    industry: 'Retail · FMCG',
     logo: '🛒',
-    description: 'Retail & FMCG',
-    color: 'from-red-500 to-red-600',
+    bgColor: 'from-red-600 to-red-700',
   },
 ]
 
@@ -68,23 +68,23 @@ export default function Analytics() {
 
             {/* Companies we've worked with */}
             <div className="mt-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-soft">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-soft mb-4">
                 Companies we've worked with
               </p>
-              <div className="mt-4 flex flex-wrap gap-3">
-                {companies.map((company, i) => (
+              <div className="flex flex-wrap gap-3">
+                {analyticsCompanies.map((company, i) => (
                   <motion.div
                     key={company.name}
-                    initial={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 0.85 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true, margin: '-60px' }}
-                    transition={{ duration: 0.5, delay: i * 0.1 }}
-                    className={`bg-gradient-to-br ${company.color} flex items-center gap-3 rounded-2xl px-5 py-3 transition-all hover:scale-105 hover:shadow-lg`}
+                    viewport={{ once: true, margin: '-40px' }}
+                    transition={{ duration: 0.5, delay: i * 0.15 }}
+                    className={`bg-gradient-to-br ${company.bgColor} rounded-2xl px-6 py-4 flex items-center gap-4 transition-all hover:scale-105 hover:shadow-xl`}
                   >
-                    <span className="text-2xl">{company.logo}</span>
+                    <span className="text-4xl">{company.logo}</span>
                     <div>
-                      <p className="text-sm font-semibold">{company.name}</p>
-                      <p className="text-xs opacity-90">{company.description}</p>
+                      <p className="font-display text-lg font-semibold">{company.name}</p>
+                      <p className="text-sm opacity-90">{company.industry}</p>
                     </div>
                   </motion.div>
                 ))}
