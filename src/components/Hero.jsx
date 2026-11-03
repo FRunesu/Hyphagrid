@@ -9,12 +9,10 @@ const slides = [
   { src: './hero/dealership.jpg', label: 'Car dealerships' },
   { src: './hero/retail.jpg', label: 'Retail & grocery' },
 ]
-
 const SLIDE_MS = 4500
 
 export default function Hero() {
   const [index, setIndex] = useState(0)
-
   useEffect(() => {
     const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), SLIDE_MS)
     return () => clearInterval(id)
@@ -37,18 +35,10 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-black/30" />
 
       <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-24">
-        <motion.p
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.7 }}
-          className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-white/80"
-        >
-          Websites · Marketing · AI Chatbots · Data Analytics
-        </motion.p>
         <motion.h1
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.45, duration: 0.8 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
           className="max-w-4xl font-display text-5xl font-medium leading-[1.05] text-white md:text-7xl"
         >
           Digital experiences that make your business look as good as it is.
@@ -56,7 +46,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.65, duration: 0.7 }}
+          transition={{ delay: 0.5, duration: 0.7 }}
           className="mt-6 max-w-2xl text-lg text-white/85"
         >
           From construction sites to law firms, restaurants to car dealerships — we design websites,
@@ -65,43 +55,17 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.85, duration: 0.7 }}
+          transition={{ delay: 0.7, duration: 0.7 }}
           className="mt-8 flex flex-wrap items-center gap-4"
         >
-          <a
-            href="#projects"
-            className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-ink transition-colors hover:bg-accent hover:text-white"
-          >
-            See our work
-          </a>
-          <a
-            href="#contact"
-            className="rounded-full border border-white/60 px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
-          >
-            Talk to us
-          </a>
+          <a href="#projects" className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-ink transition-colors hover:bg-accent hover:text-white">See our work</a>
+          <a href="#contact" className="rounded-full border border-white/60 px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10">Talk to us</a>
         </motion.div>
-
         <div className="mt-12 flex items-center gap-3">
           {slides.map((s, i) => (
-            <button
-              key={s.src}
-              onClick={() => setIndex(i)}
-              aria-label={`Show ${s.label}`}
-              className="group flex items-center gap-2"
-            >
-              <span
-                className={`h-1.5 rounded-full transition-all duration-500 ${
-                  i === index ? 'w-10 bg-white' : 'w-4 bg-white/40 group-hover:bg-white/70'
-                }`}
-              />
-              <span
-                className={`hidden text-xs font-medium transition-opacity md:inline ${
-                  i === index ? 'text-white' : 'text-white/50'
-                }`}
-              >
-                {s.label}
-              </span>
+            <button key={s.src} onClick={() => setIndex(i)} aria-label={`Show ${s.label}`} className="group flex items-center gap-2">
+              <span className={`h-1.5 rounded-full transition-all duration-500 ${i === index ? 'w-10 bg-white' : 'w-4 bg-white/40 group-hover:bg-white/70'}`} />
+              <span className={`hidden text-xs font-medium transition-opacity md:inline ${i === index ? 'text-white' : 'text-white/50'}`}>{s.label}</span>
             </button>
           ))}
         </div>
