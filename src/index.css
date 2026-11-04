@@ -65,3 +65,36 @@ body { @apply bg-cream text-ink font-sans antialiased; }
   .service-chatbot-cover::before { top: 32px; right: 20px; width: 128px; height: 100px; }
   .service-chatbot-cover::after { top: 120px; right: 36px; width: 88px; height: 48px; }
 }
+
+
+/* Count-up editorial stats */
+#why-website .grid > div.hypha-stat-card {
+  position: relative; display: flex; flex-direction: column; isolation: isolate; overflow: hidden;
+  min-height: 242px; padding: 26px 25px 23px;
+  border: 1px solid rgba(24,33,30,.09) !important; border-radius: 18px !important;
+  background: linear-gradient(145deg,#fbf9f4,#f0ece3) !important;
+  box-shadow: 0 12px 32px rgba(24,33,30,.045);
+}
+#why-website .grid > div.hypha-stat-card::before {
+  content: ""; position: absolute; z-index: 0; top: -66px; right: -66px;
+  width: 132px; height: 132px; border: 1px solid rgba(173,128,80,.12); border-radius: 50%; pointer-events: none;
+}
+#why-website .hypha-stat-kicker,#why-website .hypha-stat-value,#why-website .hypha-stat-label,#why-website .hypha-stat-track { position: relative; z-index: 1; }
+#why-website .hypha-stat-kicker { margin: 0; color: #857967 !important; font: 600 10px/1.25 "DM Sans",sans-serif; letter-spacing: .15em; }
+#why-website .hypha-stat-value {
+  display: block; margin: 25px 0 0; color: #ad8050 !important;
+  font: 500 clamp(3.7rem,5.4vw,4.75rem)/.88 "Cormorant Garamond",Georgia,serif;
+  font-variant-numeric: lining-nums tabular-nums; letter-spacing: -.045em;
+}
+#why-website .hypha-stat-label { max-width: 27ch; margin: 15px 0 22px; color: rgba(24,33,30,.72) !important; font: 400 15px/1.55 "DM Sans",sans-serif; }
+#why-website .hypha-stat-track { width: 100%; height: 2px; margin-top: auto; overflow: hidden; border-radius: 999px; background: rgba(24,33,30,.10); }
+#why-website .hypha-stat-fill {
+  display: block; width: 100%; height: 100%; border-radius: inherit;
+  background: linear-gradient(90deg,#ad8050,#d6c2a7); transform: scaleX(0); transform-origin: left center;
+  transition: transform 1.15s cubic-bezier(.2,.7,.2,1);
+}
+#why-website .hypha-stat-card.is-visible .hypha-stat-fill { transform: scaleX(1); }
+@media(max-width:767px) {
+  #why-website .grid > div.hypha-stat-card { min-height: 220px; padding: 23px 21px 20px; }
+  #why-website .hypha-stat-value { margin-top: 22px; font-size: clamp(3.4rem,12vw,4.2rem); }
+}

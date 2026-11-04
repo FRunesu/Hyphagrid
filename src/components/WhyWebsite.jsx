@@ -1,11 +1,38 @@
-import { motion } from 'framer-motion'
+import { useEffect, useRef } from 'react'
+import { animate, motion, useInView, useMotionValue, useReducedMotion, useTransform } from 'framer-motion'
 
 const stats = [
-  { value: '81%', label: 'of consumers research a business online before buying' },
-  { value: '75%', label: 'judge a company’s credibility by its website design' },
-  { value: '88%', label: 'are less likely to return after a bad website experience' },
-  { value: '0.05s', label: 'is all it takes for visitors to form an opinion of your site' },
+  { value: 81, suffix: '%', decimals: 0, category: 'ONLINE RESEARCH', label: 'of consumers research a business online before buying' },
+  { value: 75, suffix: '%', decimals: 0, category: 'CREDIBILITY', label: 'judge a company’s credibility by its website design' },
+  { value: 88, suffix: '%', decimals: 0, category: 'CUSTOMER RETENTION', label: 'are less likely to return after a bad website experience' },
+  { value: 0.05, suffix: 's', decimals: 2, category: 'FIRST IMPRESSION', label: 'is all it takes for visitors to form an opinion of your site' },
 ]
+
+function CountUp({ value, suffix, decimals, label }) {
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: '-60px' })
+  const prefersReducedMotion = useReducedMotion()
+  const count = useMotionValue(0)
+  const display = useTransform(count, latest =>
+    (decimals ? latest.toFixed(decimals) : Math.round(latest).toString()) + suffix
+  )
+
+  useEffect(() => {
+    if (!inView) return
+    if (prefersReducedMotion) {
+      count.set(value)
+      return
+    }
+    const controls = animate(count, value, { duration: 1.35, ease: 'easeOut' })
+    return () => controls.stop()
+  }, [count, inView, prefersReducedMotion, value])
+
+  return (
+    <motion.span ref={ref} aria-label={value + suffix} className="hypha-stat-value">
+      {display}
+    </motion.span>
+  )
+}
 
 export default function WhyWebsite() {
   return (
@@ -39,10 +66,20 @@ export default function WhyWebsite() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="rounded-3xl bg-cream p-8"
+              className="hypha-stat-card rounded-3xl bg-cream p-8"
             >
-              <p className="font-display text-5xl font-medium text-accent">{s.value}</p>
-              <p className="mt-4 leading-relaxed text-ink/70">{s.label}</p>
+              <p className="hypha-stat-kicker">{String(i + 1).padStart(2, '0')} / {s.category}</p>
+              <CountUp value={s.value} suffix={s.suffix} decimals={s.decimals} label={s.label} />
+              <p className="hypha-stat-label">{s.label}</p>
+              <div className="hypha-stat-track" aria-hidden="true">
+                <motion.span
+                  className="hypha-stat-fill"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true, margin: '-60px' }}
+                  transition={{ duration: 1.15, delay: i * 0.1 }}
+                />
+              </div>
             </motion.div>
           ))}
         </div>
