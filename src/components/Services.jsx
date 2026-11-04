@@ -20,7 +20,7 @@ export default function Services() {
       </motion.div>
       <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-80px' }} className="mt-14 grid gap-6 md:grid-cols-2">
         {services.map((s) => (
-          <motion.div key={s.title} variants={item} style={{ backgroundImage: `linear-gradient(110deg, rgba(9,15,24,.82), rgba(9,15,24,.52)), url("${s.image}")` }} className="group relative overflow-hidden rounded-3xl border border-white/15 bg-cover bg-center p-8 text-white shadow-lg transition-transform hover:-translate-y-1">
+          <motion.div key={s.title} variants={item} style={{ backgroundImage: `linear-gradient(110deg, rgba(9,15,24,.82), rgba(9,15,24,.52)), url("${s.image}")` }} className={"group relative overflow-hidden rounded-3xl border border-white/15 bg-cover bg-center p-8 text-white shadow-lg transition-transform hover:-translate-y-1 " + (s.title === "AI Chatbots" ? "service-chatbot-cover" : "")}>
             <div className="relative z-10">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 text-white backdrop-blur-sm transition-colors group-hover:bg-accent"><s.icon size={22} /></div>
               <h3 className="mt-6 font-display text-2xl font-medium text-white">{s.title}</h3>

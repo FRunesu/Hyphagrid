@@ -12,3 +12,56 @@
 html { scroll-behavior: smooth; }
 body { @apply bg-cream text-ink font-sans antialiased; }
 ::selection { background: #ad8050; color: #fff; }
+
+
+/* Custom conversation artwork for the AI chatbot service card */
+.service-chatbot-cover {
+  background-color: #1b2924 !important;
+  background-image:
+    radial-gradient(ellipse at 86% 16%, rgba(173,128,80,.20), transparent 33%),
+    radial-gradient(ellipse at 74% 94%, rgba(106,139,119,.18), transparent 42%),
+    linear-gradient(132deg, #1a2924 0%, #202c28 57%, #18211e 100%) !important;
+}
+.service-chatbot-cover::before,
+.service-chatbot-cover::after {
+  content: "";
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  z-index: 0;
+}
+.service-chatbot-cover::before {
+  top: 38px;
+  right: 34px;
+  width: clamp(145px, 22vw, 188px);
+  height: 118px;
+  border: 1px solid rgba(225,211,191,.22);
+  border-radius: 18px 18px 5px 18px;
+  background:
+    linear-gradient(rgba(225,211,191,.55),rgba(225,211,191,.55)) 22px 25px/62px 3px no-repeat,
+    linear-gradient(rgba(225,211,191,.24),rgba(225,211,191,.24)) 22px 42px/112px 3px no-repeat,
+    linear-gradient(rgba(225,211,191,.18),rgba(225,211,191,.18)) 22px 57px/91px 3px no-repeat,
+    linear-gradient(rgba(225,211,191,.14),rgba(225,211,191,.14)) 22px 72px/72px 3px no-repeat,
+    radial-gradient(circle at 18px 18px, #bd9668 0 2px, transparent 2.5px),
+    rgba(247,244,237,.055);
+  box-shadow: 0 18px 42px rgba(0,0,0,.16);
+  transform: rotate(2deg);
+}
+.service-chatbot-cover::after {
+  top: 139px;
+  right: 60px;
+  width: 108px;
+  height: 56px;
+  border: 1px solid rgba(225,211,191,.17);
+  border-radius: 14px 14px 14px 5px;
+  background:
+    radial-gradient(circle, rgba(225,211,191,.58) 0 2px, transparent 2.6px) 19px 23px/13px 13px repeat-x,
+    rgba(247,244,237,.085);
+  box-shadow: 0 14px 28px rgba(0,0,0,.14);
+  transform: rotate(-4deg);
+}
+.service-chatbot-cover > div { max-width: 32ch; }
+@media(max-width:767px) {
+  .service-chatbot-cover::before { top: 32px; right: 20px; width: 128px; height: 100px; }
+  .service-chatbot-cover::after { top: 120px; right: 36px; width: 88px; height: 48px; }
+}
