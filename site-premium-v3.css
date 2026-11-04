@@ -1,0 +1,150 @@
+@media(max-width:1150px){
+#root header nav{flex-wrap:wrap!important;row-gap:2px!important;align-items:center!important}
+#root header nav>div[class~="md:flex"]{display:flex!important;order:3!important;flex:0 0 100%;width:100%;justify-content:flex-start;gap:clamp(10px,1.8vw,16px)!important;overflow-x:auto;padding:8px 0 2px;scrollbar-width:none}
+#root header nav>div[class~="md:flex"]::-webkit-scrollbar{display:none}
+#root header nav>div[class~="md:flex"] a{font-size:clamp(11px,1.25vw,13px)!important}
+#root header nav>div[class~="md:flex"] a[href="#contact"]{padding:7px 12px!important}
+}
+.hypha-menu-toggle,.hypha-mobile-menu{display:none!important}
+.hypha-analytics-teaser{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px}
+.hypha-analytics-teaser h2{margin:8px 0 0;font:500 clamp(26px,4vw,42px) Fraunces,Georgia,serif}
+.hypha-analytics-teaser p{margin:0;color:rgba(255,255,255,.72)}
+.hypha-analytics-teaser button{border:0;border-radius:999px;padding:13px 22px;background:#fff;color:#101418;font:600 14px Inter,sans-serif;cursor:pointer}
+.hypha-company-logo-wrap{display:flex;align-items:center;height:58px;margin-bottom:18px}
+.hypha-company-logo{display:block;max-width:190px;max-height:48px;object-fit:contain;background:#fff;border-radius:8px;padding:7px 10px}
+.hypha-site-preview{position:absolute;top:0;left:0;right:0;height:190px;overflow:hidden;background:linear-gradient(135deg,#172333,#54677a)}
+.hypha-site-preview img{width:100%;height:100%;display:block;object-fit:cover;object-position:top center}
+.hypha-site-preview:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.25))}
+.hypha-service-cover{position:relative;overflow:hidden;isolation:isolate;min-height:250px;background-position:center;background-size:cover}
+.hypha-service-cover h3,.hypha-service-cover p{position:relative;z-index:1;color:#fff!important}
+.hypha-service-cover>div{position:relative;z-index:1}
+
+@media(max-width:1150px){#root header nav>div.hypha-desktop-menu{display:flex!important}}
+
+/* Premium editorial art direction */
+:root {
+  --color-ink: #18211e;
+  --color-cream: #f5f2eb;
+  --color-accent: #ad8050;
+  --color-accent-soft: #e1d3bf;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--color-cream); color: var(--color-ink); font-family: "DM Sans", sans-serif; }
+#root h1,#root h2,#root h3,#root h4,#root h5 { font-family: "Cormorant Garamond", Georgia, serif; letter-spacing: -.035em; }
+#root h1 { font-weight: 500; letter-spacing: -.045em; line-height: .96; }
+#root h2 { font-weight: 500; line-height: 1.02; }
+#root header nav { min-height: 74px; }
+#root header nav > a:first-child { font-family: "DM Sans", sans-serif; font-size: 1.28rem; letter-spacing: -.055em; }
+#root header nav > div a { font-weight: 500; letter-spacing: .015em; }
+#root header nav a[href="#contact"],#top a,#analytics button,#contact > div a { border-radius: 14px !important; letter-spacing: .015em; }
+#top h1 { max-width: 12ch; font-size: clamp(3.8rem, 8.5vw, 7.4rem); text-wrap: balance; }
+#top > div:last-child { padding-bottom: clamp(3rem, 8vh, 6rem); }
+#top > div.absolute { background: linear-gradient(90deg,rgba(13,20,18,.64),rgba(13,20,18,.16)),linear-gradient(0deg,rgba(13,20,18,.72),transparent 75%); }
+#services .max-w-3xl h2,#projects h2,#why-website h2 { max-width: 15ch; }
+#services .max-w-3xl > p:last-child,#top p { max-width: 58ch; }
+.hypha-service-cover { min-height: 290px; border-radius: 20px !important; border-color: rgba(255,255,255,.22) !important; box-shadow: 0 18px 50px rgba(24,33,30,.12); }
+.hypha-service-cover h3 { font-size: clamp(1.8rem,3vw,2.35rem); }
+.hypha-service-cover p { max-width: 38ch; font-size: 1rem; line-height: 1.7; }
+#services .mt-14 { gap: 1rem; }
+#analytics { background: #18211e !important; }
+#projects button.group { background: #202a26 !important; border: 1px solid rgba(255,255,255,.1); border-radius: 20px !important; }
+#projects a.group { border-radius: 20px !important; border-color: rgba(24,33,30,.12) !important; background: #fffdfa; }
+#projects a.group > div:last-child { background: transparent; }
+#projects h3 { letter-spacing: -.02em; }
+#why-website { background: #eae6dc !important; }
+#why-website .grid > div { border: 1px solid rgba(24,33,30,.08); border-radius: 18px !important; background: #f7f4ed !important; }
+#why-website .grid > div > p:first-child { color: #ad8050 !important; }
+#contact { background: #18211e !important; }
+#root .rounded-3xl { border-radius: 20px !important; }
+#root .rounded-2xl { border-radius: 14px !important; }
+#root a,#root button { transition-duration: .25s; }
+@media(max-width:767px){
+ #top h1 { max-width: 10ch; font-size: clamp(3.25rem,14vw,5rem); }
+ #services .hypha-service-cover { min-height: 260px; }
+}
+
+
+/* Custom conversation artwork for the AI chatbot service card */
+.service-chatbot-cover {
+  background-color: #1b2924 !important;
+  background-image:
+    radial-gradient(ellipse at 86% 16%, rgba(173,128,80,.20), transparent 33%),
+    radial-gradient(ellipse at 74% 94%, rgba(106,139,119,.18), transparent 42%),
+    linear-gradient(132deg, #1a2924 0%, #202c28 57%, #18211e 100%) !important;
+}
+.service-chatbot-cover::before,
+.service-chatbot-cover::after {
+  content: "";
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  z-index: 0;
+}
+.service-chatbot-cover::before {
+  top: 38px;
+  right: 34px;
+  width: clamp(145px, 22vw, 188px);
+  height: 118px;
+  border: 1px solid rgba(225,211,191,.22);
+  border-radius: 18px 18px 5px 18px;
+  background:
+    linear-gradient(rgba(225,211,191,.55),rgba(225,211,191,.55)) 22px 25px/62px 3px no-repeat,
+    linear-gradient(rgba(225,211,191,.24),rgba(225,211,191,.24)) 22px 42px/112px 3px no-repeat,
+    linear-gradient(rgba(225,211,191,.18),rgba(225,211,191,.18)) 22px 57px/91px 3px no-repeat,
+    linear-gradient(rgba(225,211,191,.14),rgba(225,211,191,.14)) 22px 72px/72px 3px no-repeat,
+    radial-gradient(circle at 18px 18px, #bd9668 0 2px, transparent 2.5px),
+    rgba(247,244,237,.055);
+  box-shadow: 0 18px 42px rgba(0,0,0,.16);
+  transform: rotate(2deg);
+}
+.service-chatbot-cover::after {
+  top: 139px;
+  right: 60px;
+  width: 108px;
+  height: 56px;
+  border: 1px solid rgba(225,211,191,.17);
+  border-radius: 14px 14px 14px 5px;
+  background:
+    radial-gradient(circle, rgba(225,211,191,.58) 0 2px, transparent 2.6px) 19px 23px/13px 13px repeat-x,
+    rgba(247,244,237,.085);
+  box-shadow: 0 14px 28px rgba(0,0,0,.14);
+  transform: rotate(-4deg);
+}
+.service-chatbot-cover > div { max-width: 32ch; }
+@media(max-width:767px) {
+  .service-chatbot-cover::before { top: 32px; right: 20px; width: 128px; height: 100px; }
+  .service-chatbot-cover::after { top: 120px; right: 36px; width: 88px; height: 48px; }
+}
+
+
+/* Count-up editorial stats */
+#why-website .grid > div.hypha-stat-card {
+  position: relative; display: flex; flex-direction: column; isolation: isolate; overflow: hidden;
+  min-height: 242px; padding: 26px 25px 23px;
+  border: 1px solid rgba(24,33,30,.09) !important; border-radius: 18px !important;
+  background: linear-gradient(145deg,#fbf9f4,#f0ece3) !important;
+  box-shadow: 0 12px 32px rgba(24,33,30,.045);
+}
+#why-website .grid > div.hypha-stat-card::before {
+  content: ""; position: absolute; z-index: 0; top: -66px; right: -66px;
+  width: 132px; height: 132px; border: 1px solid rgba(173,128,80,.12); border-radius: 50%; pointer-events: none;
+}
+#why-website .hypha-stat-kicker,#why-website .hypha-stat-value,#why-website .hypha-stat-label,#why-website .hypha-stat-track { position: relative; z-index: 1; }
+#why-website .hypha-stat-kicker { margin: 0; color: #857967 !important; font: 600 10px/1.25 "DM Sans",sans-serif; letter-spacing: .15em; }
+#why-website .hypha-stat-value {
+  display: block; margin: 25px 0 0; color: #ad8050 !important;
+  font: 500 clamp(3.7rem,5.4vw,4.75rem)/.88 "Cormorant Garamond",Georgia,serif;
+  font-variant-numeric: lining-nums tabular-nums; letter-spacing: -.045em;
+}
+#why-website .hypha-stat-label { max-width: 27ch; margin: 15px 0 22px; color: rgba(24,33,30,.72) !important; font: 400 15px/1.55 "DM Sans",sans-serif; }
+#why-website .hypha-stat-track { width: 100%; height: 2px; margin-top: auto; overflow: hidden; border-radius: 999px; background: rgba(24,33,30,.10); }
+#why-website .hypha-stat-fill {
+  display: block; width: 100%; height: 100%; border-radius: inherit;
+  background: linear-gradient(90deg,#ad8050,#d6c2a7); transform: scaleX(0); transform-origin: left center;
+  transition: transform 1.15s cubic-bezier(.2,.7,.2,1);
+}
+#why-website .hypha-stat-card.is-visible .hypha-stat-fill { transform: scaleX(1); }
+@media(max-width:767px) {
+  #why-website .grid > div.hypha-stat-card { min-height: 220px; padding: 23px 21px 20px; }
+  #why-website .hypha-stat-value { margin-top: 22px; font-size: clamp(3.4rem,12vw,4.2rem); }
+}
