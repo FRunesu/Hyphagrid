@@ -2,19 +2,6 @@
   const style = document.createElement('style')
   style.id = 'hyphagrid-fixes-v6'
   style.textContent = `
-    #root header.fixed.inset-x-0.top-0 {
-      background: rgba(245, 242, 235, .97) !important;
-      color: #18211e !important;
-      box-shadow: 0 1px 0 rgba(24, 33, 30, .08);
-      -webkit-backdrop-filter: blur(14px);
-      backdrop-filter: blur(14px);
-    }
-
-    #root header.fixed.inset-x-0.top-0 nav > div a[href="#contact"] {
-      background: #18211e !important;
-      color: #fff !important;
-    }
-
     @media (min-width: 768px) and (max-width: 1150px) {
       #top h1 {
         max-width: 100% !important;
