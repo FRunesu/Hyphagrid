@@ -29,7 +29,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-4 px-5 py-3 sm:px-6">
         <a href="#top" className="shrink-0 font-display text-xl font-semibold tracking-tight">
-          Hypha<span className="text-accent">grid</span>
+          biz<span className="text-accent">.amp</span>
         </a>
         <div className="order-3 flex w-full items-center gap-4 overflow-x-auto py-2 text-xs font-medium lg:order-none lg:w-auto lg:gap-5 xl:gap-6 xl:text-sm">
           {links.map((link) => (
