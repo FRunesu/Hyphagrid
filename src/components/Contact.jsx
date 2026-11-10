@@ -26,17 +26,17 @@ export default function Contact() {
             className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold text-ink transition-colors hover:bg-accent hover:text-white"
           >
             <Mail size={18} />
-            frunesu1.0@gmail.com
+            Email biz.amp
           </a>
         </motion.div>
       </div>
       <footer className="mt-24 border-t border-white/10 pt-8">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-white/50 md:flex-row">
           <p>
-            Runesu<span className="text-accent">.</span>Digital — Websites · Marketing · AI Chatbots ·
+            biz<span className="text-accent">.</span>amp — Websites · Marketing · AI Chatbots ·
             Data Analytics
           </p>
-          <p>© {new Date().getFullYear()} Runesu Digital. All rights reserved.</p>
+          <p>© biz.amp. All rights reserved.</p>
         </div>
       </footer>
     </section>
