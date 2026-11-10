@@ -51,12 +51,12 @@
       const labelNode = [...emailLink.childNodes].find(
         (node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim()
       )
-      if (labelNode && labelNode.textContent.trim() !== 'Email Hyphagrid') {
-        labelNode.textContent = 'Email Hyphagrid'
+      if (labelNode && labelNode.textContent.trim() !== 'Email biz.amp') {
+        labelNode.textContent = 'Email biz.amp'
       } else if (!labelNode) {
-        emailLink.append(document.createTextNode('Email Hyphagrid'))
+        emailLink.append(document.createTextNode('Email biz.amp'))
       }
-      emailLink.setAttribute('aria-label', 'Email Hyphagrid')
+      emailLink.setAttribute('aria-label', 'Email biz.amp')
     }
 
     const copyright = [...contact.querySelectorAll('footer p')].find((p) => p.textContent.includes('©'))
