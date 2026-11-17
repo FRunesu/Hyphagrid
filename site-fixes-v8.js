@@ -11,9 +11,9 @@
     }
 
     #root header.fixed.inset-x-0.top-0[class*="bg-cream/95"] {
-      background: rgba(245, 242, 235, .97) !important;
-      color: #18211e !important;
-      box-shadow: 0 1px 0 rgba(24, 33, 30, .08) !important;
+      background: rgba(239, 238, 233, .97) !important;
+      color: #1d2833 !important;
+      box-shadow: 0 1px 0 rgba(29, 40, 51, .08) !important;
       -webkit-backdrop-filter: blur(14px) !important;
       backdrop-filter: blur(14px) !important;
     }
@@ -25,12 +25,12 @@
     }
 
     #root header.fixed.inset-x-0.top-0[class~="bg-transparent"] nav > div a[href="#contact"]:last-child {
-      background: #fff !important;
-      color: #18211e !important;
+      background: #efeee9 !important;
+      color: #1d2833 !important;
     }
 
     #root header.fixed.inset-x-0.top-0[class*="bg-cream/95"] nav > div a[href="#contact"]:last-child {
-      background: #18211e !important;
+      background: #1d2833 !important;
       color: #fff !important;
     }
   `
