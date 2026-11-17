@@ -3,24 +3,24 @@
 @theme {
   --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
-  --color-ink: #18211e;
-  --color-cream: #f5f2eb;
-  --color-accent: #ad8050;
-  --color-accent-soft: #e1d3bf;
+  --color-ink: #1d2833;
+  --color-cream: #efeee9;
+  --color-accent: #7f96a4;
+  --color-accent-soft: #d4dfe4;
 }
 
 html { scroll-behavior: smooth; }
 body { @apply bg-cream text-ink font-sans antialiased; }
-::selection { background: #ad8050; color: #fff; }
+::selection { background: #7f96a4; color: #fff; }
 
 
 /* Custom conversation artwork for the AI chatbot service card */
 .service-chatbot-cover {
-  background-color: #1b2924 !important;
+  background-color: #17242f !important;
   background-image:
-    radial-gradient(ellipse at 86% 16%, rgba(173,128,80,.20), transparent 33%),
-    radial-gradient(ellipse at 74% 94%, rgba(106,139,119,.18), transparent 42%),
-    linear-gradient(132deg, #1a2924 0%, #202c28 57%, #18211e 100%) !important;
+    radial-gradient(ellipse at 86% 16%, rgba(127,150,164,.20), transparent 33%),
+    radial-gradient(ellipse at 74% 94%, rgba(127,150,164,.18), transparent 42%),
+    linear-gradient(132deg, #1d2b37 0%, #263743 57%, #1d2833 100%) !important;
 }
 .service-chatbot-cover::before,
 .service-chatbot-cover::after {
@@ -35,15 +35,15 @@ body { @apply bg-cream text-ink font-sans antialiased; }
   right: 34px;
   width: clamp(145px, 22vw, 188px);
   height: 118px;
-  border: 1px solid rgba(225,211,191,.22);
+  border: 1px solid rgba(216,226,231,.22);
   border-radius: 18px 18px 5px 18px;
   background:
-    linear-gradient(rgba(225,211,191,.55),rgba(225,211,191,.55)) 22px 25px/62px 3px no-repeat,
-    linear-gradient(rgba(225,211,191,.24),rgba(225,211,191,.24)) 22px 42px/112px 3px no-repeat,
-    linear-gradient(rgba(225,211,191,.18),rgba(225,211,191,.18)) 22px 57px/91px 3px no-repeat,
-    linear-gradient(rgba(225,211,191,.14),rgba(225,211,191,.14)) 22px 72px/72px 3px no-repeat,
-    radial-gradient(circle at 18px 18px, #bd9668 0 2px, transparent 2.5px),
-    rgba(247,244,237,.055);
+    linear-gradient(rgba(216,226,231,.55),rgba(216,226,231,.55)) 22px 25px/62px 3px no-repeat,
+    linear-gradient(rgba(216,226,231,.24),rgba(216,226,231,.24)) 22px 42px/112px 3px no-repeat,
+    linear-gradient(rgba(216,226,231,.18),rgba(216,226,231,.18)) 22px 57px/91px 3px no-repeat,
+    linear-gradient(rgba(216,226,231,.14),rgba(216,226,231,.14)) 22px 72px/72px 3px no-repeat,
+    radial-gradient(circle at 18px 18px, #879eac 0 2px, transparent 2.5px),
+    rgba(239,238,233,.055);
   box-shadow: 0 18px 42px rgba(0,0,0,.16);
   transform: rotate(2deg);
 }
@@ -52,11 +52,11 @@ body { @apply bg-cream text-ink font-sans antialiased; }
   right: 60px;
   width: 108px;
   height: 56px;
-  border: 1px solid rgba(225,211,191,.17);
+  border: 1px solid rgba(216,226,231,.17);
   border-radius: 14px 14px 14px 5px;
   background:
-    radial-gradient(circle, rgba(225,211,191,.58) 0 2px, transparent 2.6px) 19px 23px/13px 13px repeat-x,
-    rgba(247,244,237,.085);
+    radial-gradient(circle, rgba(216,226,231,.58) 0 2px, transparent 2.6px) 19px 23px/13px 13px repeat-x,
+    rgba(239,238,233,.085);
   box-shadow: 0 14px 28px rgba(0,0,0,.14);
   transform: rotate(-4deg);
 }
@@ -71,26 +71,26 @@ body { @apply bg-cream text-ink font-sans antialiased; }
 #why-website .grid > div.hypha-stat-card {
   position: relative; display: flex; flex-direction: column; isolation: isolate; overflow: hidden;
   min-height: 242px; padding: 26px 25px 23px;
-  border: 1px solid rgba(24,33,30,.09) !important; border-radius: 18px !important;
-  background: linear-gradient(145deg,#fbf9f4,#f0ece3) !important;
-  box-shadow: 0 12px 32px rgba(24,33,30,.045);
+  border: 1px solid rgba(29,40,51,.09) !important; border-radius: 18px !important;
+  background: linear-gradient(145deg,#fafaf7,#e7ebeb) !important;
+  box-shadow: 0 12px 32px rgba(29,40,51,.045);
 }
 #why-website .grid > div.hypha-stat-card::before {
   content: ""; position: absolute; z-index: 0; top: -66px; right: -66px;
-  width: 132px; height: 132px; border: 1px solid rgba(173,128,80,.12); border-radius: 50%; pointer-events: none;
+  width: 132px; height: 132px; border: 1px solid rgba(127,150,164,.12); border-radius: 50%; pointer-events: none;
 }
 #why-website .hypha-stat-kicker,#why-website .hypha-stat-value,#why-website .hypha-stat-label,#why-website .hypha-stat-track { position: relative; z-index: 1; }
-#why-website .hypha-stat-kicker { margin: 0; color: #857967 !important; font: 600 10px/1.25 "DM Sans",sans-serif; letter-spacing: .15em; }
+#why-website .hypha-stat-kicker { margin: 0; color: #657785 !important; font: 600 10px/1.25 "DM Sans",sans-serif; letter-spacing: .15em; }
 #why-website .hypha-stat-value {
-  display: block; margin: 25px 0 0; color: #ad8050 !important;
+  display: block; margin: 25px 0 0; color: #7f96a4 !important;
   font: 500 clamp(3.7rem,5.4vw,4.75rem)/.88 "Cormorant Garamond",Georgia,serif;
   font-variant-numeric: lining-nums tabular-nums; letter-spacing: -.045em;
 }
-#why-website .hypha-stat-label { max-width: 27ch; margin: 15px 0 22px; color: rgba(24,33,30,.72) !important; font: 400 15px/1.55 "DM Sans",sans-serif; }
-#why-website .hypha-stat-track { width: 100%; height: 2px; margin-top: auto; overflow: hidden; border-radius: 999px; background: rgba(24,33,30,.10); }
+#why-website .hypha-stat-label { max-width: 27ch; margin: 15px 0 22px; color: rgba(29,40,51,.72) !important; font: 400 15px/1.55 "DM Sans",sans-serif; }
+#why-website .hypha-stat-track { width: 100%; height: 2px; margin-top: auto; overflow: hidden; border-radius: 999px; background: rgba(29,40,51,.10); }
 #why-website .hypha-stat-fill {
   display: block; width: 100%; height: 100%; border-radius: inherit;
-  background: linear-gradient(90deg,#ad8050,#d6c2a7); transform: scaleX(0); transform-origin: left center;
+  background: linear-gradient(90deg,#7f96a4,#bacbd3); transform: scaleX(0); transform-origin: left center;
   transition: transform 1.15s cubic-bezier(.2,.7,.2,1);
 }
 #why-website .hypha-stat-card.is-visible .hypha-stat-fill { transform: scaleX(1); }
