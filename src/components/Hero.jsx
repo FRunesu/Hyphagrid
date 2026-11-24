@@ -3,11 +3,11 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 const slides = [
   { src: './hero/construction.jpg', label: 'Construction' },
-  { src: './hero/property-slide.svg', label: 'Real estate & property' },
+  { src: 'https://images.unsplash.com/photo-1757359056339-22968344cce6?auto=format&fit=crop&w=2400&q=85', label: 'Real estate & property' },
   { src: './hero/law.jpg', label: 'Law firms' },
-  { src: './hero/restaurant.jpg', label: 'Restaurants' },
-  { src: './hero/accounting.jpg', label: 'Accounting' },
-  { src: 'https://images.unsplash.com/photo-1777175013391-537a48303538?auto=format&fit=crop&w=2400&q=85', label: 'Car dealerships' },
+  { src: 'https://images.unsplash.com/photo-1776993298422-3e8c397d0235?auto=format&fit=crop&w=2400&q=85', label: 'Restaurants' },
+  { src: 'https://images.unsplash.com/photo-1767423802472-f5fd07dfdb10?auto=format&fit=crop&w=2400&q=85', label: 'Accounting' },
+  { src: 'https://images.unsplash.com/photo-1699862345412-15a3816d01a1?auto=format&fit=crop&w=2400&q=85', label: 'Car dealerships' },
   { src: './hero/retail.jpg', label: 'Retail & grocery' },
 ]
 const SLIDE_MS = 4500
