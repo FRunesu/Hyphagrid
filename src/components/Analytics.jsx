@@ -50,7 +50,7 @@ export default function Analytics() {
             <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}>
               <h3 className="font-display text-3xl font-medium leading-tight md:text-4xl">Where trust meets insight</h3>
               <p className="mt-5 text-lg text-white/70">
-                Finally, anyone in your business can get insights grounded in your own data. We build pipelines, semantic models and dashboards that answer questions like “what sold best last quarter, and where?” in seconds, not weeks.
+                Finally, anyone in your business can get insights grounded in your own data. We build pipelines, semantic models and dashboards that answer questions like “what sold best last quarter and where?” in seconds, not weeks.
               </p>
               <ul className="mt-7 space-y-3 text-white/80">
                 {[
