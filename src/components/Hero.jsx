@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 const slides = [
   { src: './hero/construction.jpg', label: 'Construction' },
+  { src: './hero/property-slide.svg', label: 'Real estate & property' },
   { src: './hero/law.jpg', label: 'Law firms' },
   { src: './hero/restaurant.jpg', label: 'Restaurants' },
   { src: './hero/accounting.jpg', label: 'Accounting' },
@@ -87,7 +88,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.25, duration: 0.8 }}
-          className="max-w-4xl font-display text-4xl font-medium leading-[1.05] text-white md:text-6xl"
+          className="max-w-4xl font-display text-3xl font-medium leading-[1.05] text-white md:text-5xl"
         >
           Digital experiences that make your business look as good as it is.
         </motion.h1>
