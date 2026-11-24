@@ -5,8 +5,8 @@
     @media (min-width: 768px) and (max-width: 1150px) {
       #top h1 {
         max-width: 100% !important;
-        font-size: clamp(3.1rem, 7vw, 5rem) !important;
-        line-height: 1.02 !important;
+        font-size: clamp(1.5rem, 3.4vw, 2.5rem) !important;
+        line-height: 1.08 !important;
       }
       #top > div.relative.z-10 {
         padding-bottom: clamp(2rem, 5vh, 3rem) !important;
@@ -16,7 +16,7 @@
     @media (max-width: 767px) {
       #top h1 {
         max-width: 100% !important;
-        font-size: clamp(2.6rem, 11vw, 3.6rem) !important;
+        font-size: clamp(1.25rem, 5vw, 1.75rem) !important;
         line-height: 1.02 !important;
       }
       #top > div.relative.z-10 {
