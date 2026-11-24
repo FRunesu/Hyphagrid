@@ -98,3 +98,22 @@ body { @apply bg-cream text-ink font-sans antialiased; }
   #why-website .grid > div.hypha-stat-card { min-height: 220px; padding: 23px 21px 20px; }
   #why-website .hypha-stat-value { margin-top: 22px; font-size: clamp(3.4rem,12vw,4.2rem); }
 }
+
+
+/* Neutral, image-adaptive contrast for the full-screen hero */
+#top { height: 100svh; min-height: 100svh; }
+#top > div.absolute {
+  background:
+    linear-gradient(90deg,rgba(10,10,10,var(--hero-shade,.58)) 0%,rgba(10,10,10,.34) 52%,rgba(10,10,10,.06) 100%),
+    linear-gradient(0deg,rgba(10,10,10,calc(var(--hero-shade,.58)*.78)) 0%,rgba(10,10,10,.10) 42%,transparent 72%);
+}
+#root header.fixed.inset-x-0.top-0[class~="bg-transparent"] {
+  background: linear-gradient(180deg,rgba(12,12,12,.78) 0%,rgba(12,12,12,.48) 72%,rgba(12,12,12,.18) 100%);
+}
+#root header.fixed.inset-x-0.top-0[class~="bg-transparent"] nav > a:first-child,
+#root header.fixed.inset-x-0.top-0[class~="bg-transparent"] nav > div a:not([href="#contact"]:last-child) {
+  color: #fff;
+  opacity: 1;
+  text-shadow: 0 1px 8px rgba(0,0,0,.85);
+}
+#root header.fixed.inset-x-0.top-0[class~="bg-transparent"] nav > a:first-child span { color: #efeee9; }
