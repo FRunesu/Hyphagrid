@@ -11,15 +11,63 @@ const slides = [
 ]
 const SLIDE_MS = 4500
 
+function contrastFor(image) {
+  try {
+    const canvas = document.createElement('canvas')
+    const width = 32
+    const height = 20
+    canvas.width = width
+    canvas.height = height
+    const context = canvas.getContext('2d', { willReadFrequently: true })
+    if (!context) return 0.68
+    context.drawImage(image, 0, 0, width, height)
+    const pixels = context.getImageData(0, 0, width, height).data
+    let total = 0
+    let count = 0
+    for (let y = 6; y < height; y += 1) {
+      for (let x = 0; x < 19; x += 1) {
+        const offset = (y * width + x) * 4
+        total += 0.2126 * pixels[offset] + 0.7152 * pixels[offset + 1] + 0.0722 * pixels[offset + 2]
+        count += 1
+      }
+    }
+    const brightness = total / count / 255
+    return Math.min(0.78, Math.max(0.48, 0.44 + brightness * 0.55))
+  } catch {
+    return 0.68
+  }
+}
+
 export default function Hero() {
   const [index, setIndex] = useState(0)
+  const [shade, setShade] = useState(0.58)
+
   useEffect(() => {
     const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), SLIDE_MS)
     return () => clearInterval(id)
   }, [])
 
+  useEffect(() => {
+    let cancelled = false
+    const probe = new window.Image()
+    const updateShade = () => {
+      if (!cancelled) setShade(contrastFor(probe))
+    }
+    probe.onload = updateShade
+    probe.onerror = () => {
+      if (!cancelled) setShade(0.68)
+    }
+    probe.src = slides[index].src
+    if (probe.complete && probe.naturalWidth) updateShade()
+    return () => {
+      cancelled = true
+      probe.onload = null
+      probe.onerror = null
+    }
+  }, [index])
+
   return (
-    <section id="top" className="relative h-screen min-h-[640px] w-full overflow-hidden">
+    <section id="top" className="relative h-[100svh] min-h-[100svh] w-full overflow-hidden">
       <AnimatePresence>
         <motion.img
           key={slides[index].src}
@@ -32,40 +80,30 @@ export default function Hero() {
           transition={{ duration: 1.1, ease: [0.32, 0.72, 0, 1] }}
         />
       </AnimatePresence>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-black/30" />
+      <div className="absolute inset-0" style={{ '--hero-shade': shade }} />
 
       <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-24">
         <motion.h1
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
+          transition={{ delay: 0.25, duration: 0.8 }}
           className="max-w-4xl font-display text-5xl font-medium leading-[1.05] text-white md:text-7xl"
         >
           Digital experiences that make your business look as good as it is.
         </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.7 }}
-          className="mt-6 max-w-2xl text-lg text-white/85"
-        >
-          From construction sites to law firms, restaurants to car dealerships — we design websites,
-          chatbots and analytics that win customers and answer questions before you do.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.7 }}
-          className="mt-8 flex flex-wrap items-center gap-4"
-        >
-          <a href="#projects" className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-ink transition-colors hover:bg-accent hover:text-white">See our work</a>
-          <a href="#contact" className="rounded-full border border-white/60 px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10">Talk to us</a>
-        </motion.div>
-        <div className="mt-12 flex items-center gap-3">
+        <div className="mt-12 flex items-center gap-2" role="group" aria-label="Choose a hero image">
           {slides.map((s, i) => (
-            <button key={s.src} onClick={() => setIndex(i)} aria-label={`Show ${s.label}`} className="group flex items-center gap-2">
-              <span className={`h-1.5 rounded-full transition-all duration-500 ${i === index ? 'w-10 bg-white' : 'w-4 bg-white/40 group-hover:bg-white/70'}`} />
-              <span className={`hidden text-xs font-medium transition-opacity md:inline ${i === index ? 'text-white' : 'text-white/50'}`}>{s.label}</span>
+            <button
+              key={s.src}
+              onClick={() => setIndex(i)}
+              aria-label={'Show ' + s.label}
+              aria-pressed={i === index}
+              className="group flex items-center justify-center rounded-full p-1.5"
+            >
+              <span className={i === index
+                ? 'h-1.5 w-10 rounded-full bg-white transition-all duration-500'
+                : 'h-1.5 w-4 rounded-full bg-white/50 transition-all duration-500 group-hover:bg-white/80'}
+              />
             </button>
           ))}
         </div>
