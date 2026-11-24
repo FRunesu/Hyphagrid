@@ -87,7 +87,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.25, duration: 0.8 }}
-          className="max-w-4xl font-display text-5xl font-medium leading-[1.05] text-white md:text-7xl"
+          className="max-w-4xl font-display text-4xl font-medium leading-[1.05] text-white md:text-6xl"
         >
           Digital experiences that make your business look as good as it is.
         </motion.h1>
