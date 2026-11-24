@@ -14,14 +14,14 @@ const caseStudies = [
     name: 'InnBucks', logo: 'https://logo.clearbit.com/innbucks.co.zw?size=256', tag: 'Fintech · Mobile Money',
     summary: "Transaction analytics for one of Zimbabwe's fastest-growing mobile money services.",
     challenge: "Millions of wallet transactions across agents and branches, but reporting lived in slow, manual spreadsheets. Leadership couldn't see daily patterns, agent performance or unusual activity.",
-    solution: 'We built an automated analytics pipeline and dashboard suite: daily transaction volumes and values, branch and agent drill-downs, customer activity cohorts, and anomaly flags for unusual trends.',
+    solution: 'We built an automated analytics pipeline and dashboard suite: daily transaction volumes and values, branch and agent drill-downs, customer activity cohorts and anomaly flags for unusual trends.',
     results: ['Reporting cycle cut from days to minutes with automated daily dashboards', 'Agent and branch performance visible at a glance, enabling targeted support', 'Anomaly detection surfaced irregular transaction patterns for review'],
   },
   {
     name: 'SPAR Zimbabwe', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Spar-logo.svg', tag: 'Retail · FMCG',
     summary: 'Retail analytics through Zimbabwe’s 2024–early 2025 official exchange-rate and pricing controls.',
     challenge: 'Early in 2024, Zimbabwe prescribed retail pricing at the official ZWL exchange rate with up to a 10% margin. Later, Statutory Instrument 81A of 2024 required formal-sector prices to use the willing-buyer-willing-seller (WBWS) rate until its repeal in May 2025. As these rules and currency conditions shifted, SPAR’s store-level POS and inventory data sat in silos, making it harder to spot store and product pressure quickly.',
-    solution: 'We consolidated POS and inventory data into a shared model with dashboards for sales by store, category and product, basket analysis, and stock movement. Leaders could see sales and stock pressure sooner and make faster, demand-led ordering and promotion decisions.',
+    solution: 'We consolidated POS and inventory data into a shared model with dashboards for sales by store, category and product, basket analysis and stock movement. Leaders could see sales and stock pressure sooner and make faster, demand-led ordering and promotion decisions.',
     results: ['Store, category and product sales visible in one view', 'Fast- and slow-moving lines surfaced to inform promotions and ordering', 'Biz.amp’s analytics support helped SPAR avoid going out of business during this period.'],
   },
 ]
