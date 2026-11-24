@@ -19,10 +19,10 @@ const caseStudies = [
   },
   {
     name: 'SPAR Zimbabwe', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Spar-logo.svg', tag: 'Retail · FMCG',
-    summary: 'Sales and inventory analytics across retail stores for a leading supermarket brand.',
-    challenge: 'Store-level POS data existed in silos, making it hard to compare stores, spot fast- and slow-moving lines, or plan stock around demand patterns and seasonality.',
-    solution: 'We consolidated POS and inventory data into a single model with dashboards covering sales by store, category and product line, basket analysis, and stock-movement views that highlight overs and shortages.',
-    results: ['Single view of sales across stores, categories and time periods', 'Fast- and slow-moving product lines identified, informing promotions and ordering', 'Stock planning informed by demand trends instead of gut feel'],
+    summary: 'Retail analytics for SPAR Zimbabwe during a period of currency and pricing changes.',
+    challenge: 'During 2024 and early 2025, Zimbabwe’s exchange-rate and retail pricing rules shifted rapidly. SPAR’s store-level POS and inventory data sat in silos, limiting how quickly teams could compare stores, identify fast- and slow-moving lines, and plan stock against demand.',
+    solution: 'We consolidated POS and inventory data into a shared model with dashboards for sales by store, category and product, basket analysis, and stock movement. The shared view made it easier to use demand patterns to guide ordering and promotions.',
+    results: ['Store, category and product sales visible in one view', 'Fast- and slow-moving lines surfaced to inform promotions and ordering', 'Stock decisions guided by demand trends and seasonality'],
   },
 ]
 
