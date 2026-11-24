@@ -19,10 +19,10 @@ const caseStudies = [
   },
   {
     name: 'SPAR Zimbabwe', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Spar-logo.svg', tag: 'Retail · FMCG',
-    summary: 'Retail analytics for SPAR Zimbabwe during a period of currency and pricing changes.',
-    challenge: 'Early in 2024, Zimbabwe prescribed retail pricing at the official ZWL exchange rate with up to a 10% margin. Later, Statutory Instrument 81A of 2024 required formal-sector prices to use the willing-buyer-willing-seller (WBWS) rate until its repeal in May 2025. As exchange-rate and pricing rules shifted, SPAR’s store-level POS and inventory data sat in silos, slowing comparisons across stores and stock decisions.',
-    solution: 'We consolidated POS and inventory data into a shared model with dashboards for sales by store, category and product, basket analysis, and stock movement. This gave teams a faster view of sales, demand and stock risk, helping them guide ordering and promotions while rules and exchange conditions were changing.',
-    results: ['Store, category and product sales visible in one view', 'Fast- and slow-moving lines surfaced to inform promotions and ordering', 'Stock decisions guided by demand trends and seasonality'],
+    summary: 'Retail analytics through Zimbabwe’s 2024–early 2025 official exchange-rate and pricing controls.',
+    challenge: 'Early in 2024, Zimbabwe prescribed retail pricing at the official ZWL exchange rate with up to a 10% margin. Later, Statutory Instrument 81A of 2024 required formal-sector prices to use the willing-buyer-willing-seller (WBWS) rate until its repeal in May 2025. As these rules and currency conditions shifted, SPAR’s store-level POS and inventory data sat in silos, making it harder to spot store and product pressure quickly.',
+    solution: 'We consolidated POS and inventory data into a shared model with dashboards for sales by store, category and product, basket analysis, and stock movement. Leaders could see sales and stock pressure sooner and make faster, demand-led ordering and promotion decisions.',
+    results: ['Store, category and product sales visible in one view', 'Fast- and slow-moving lines surfaced to inform promotions and ordering', 'Biz.amp’s analytics support helped SPAR avoid going out of business during this period.'],
   },
 ]
 
