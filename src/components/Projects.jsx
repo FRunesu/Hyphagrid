@@ -20,8 +20,8 @@ const caseStudies = [
   {
     name: 'SPAR Zimbabwe', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Spar-logo.svg', tag: 'Retail · FMCG',
     summary: 'Retail analytics for SPAR Zimbabwe during a period of currency and pricing changes.',
-    challenge: 'During 2024 and early 2025, Zimbabwe’s exchange-rate and retail pricing rules shifted rapidly. SPAR’s store-level POS and inventory data sat in silos, limiting how quickly teams could compare stores, identify fast- and slow-moving lines, and plan stock against demand.',
-    solution: 'We consolidated POS and inventory data into a shared model with dashboards for sales by store, category and product, basket analysis, and stock movement. The shared view made it easier to use demand patterns to guide ordering and promotions.',
+    challenge: 'Early in 2024, Zimbabwe prescribed retail pricing at the official ZWL exchange rate with up to a 10% margin. Later, Statutory Instrument 81A of 2024 required formal-sector prices to use the willing-buyer-willing-seller (WBWS) rate until its repeal in May 2025. As exchange-rate and pricing rules shifted, SPAR’s store-level POS and inventory data sat in silos, slowing comparisons across stores and stock decisions.',
+    solution: 'We consolidated POS and inventory data into a shared model with dashboards for sales by store, category and product, basket analysis, and stock movement. This gave teams a faster view of sales, demand and stock risk, helping them guide ordering and promotions while rules and exchange conditions were changing.',
     results: ['Store, category and product sales visible in one view', 'Fast- and slow-moving lines surfaced to inform promotions and ordering', 'Stock decisions guided by demand trends and seasonality'],
   },
 ]
