@@ -22,7 +22,7 @@ export default function Contact() {
             dashboard could do for it — no jargon, no obligation.
           </p>
           <a
-            href="mailto:frunesu1.0@gmail.com"
+            href="mailto:frunesu1.0@gmail.com?subject=Project%20enquiry%20for%20biz.amp"
             className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold text-ink transition-colors hover:bg-accent hover:text-white"
           >
             <Mail size={18} />
