@@ -16,7 +16,7 @@ export default function Services() {
       <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.7 }} className="max-w-3xl">
         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-accent">What we do</p>
         <h2 className="mt-4 font-display text-4xl font-medium leading-tight md:text-5xl">One team for your entire digital presence</h2>
-        <p className="mt-5 text-lg text-ink/70">Deploy a website, orchestrate marketing, and continuously improve with chatbots and analytics — all built and maintained by one partner.</p>
+        <p className="mt-5 text-lg text-ink/70">Deploy a website, orchestrate marketing and continuously improve with chatbots and analytics — all built and maintained by one partner.</p>
       </motion.div>
       <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-80px' }} className="mt-14 grid gap-6 md:grid-cols-2">
         {services.map((s) => (
