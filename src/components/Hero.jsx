@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
 const slides = [
-  { src: './hero/construction.jpg', label: 'Construction' },
-  { src: './hero/property-slide.svg', label: 'Real estate & property' },
-  { src: './hero/law.jpg', label: 'Law firms' },
-  { src: './hero/restaurant.jpg', label: 'Restaurants' },
-  { src: './hero/accounting.jpg', label: 'Accounting' },
-  { src: './hero/dealership.jpg', label: 'Car dealerships' },
-  { src: './hero/retail.jpg', label: 'Retail & grocery' },
+  { src: 'https://images.unsplash.com/photo-1768677903496-becc4be07258?auto=format&fit=crop&w=2400&q=85', label: 'Construction' },
+  { src: 'https://images.unsplash.com/photo-1757356657991-c3fd6e2e812e?auto=format&fit=crop&w=2400&q=85', label: 'Real estate & property' },
+  { src: 'https://images.unsplash.com/photo-1568092806323-8ec13dfa9b92?auto=format&fit=crop&w=2400&q=85', label: 'Law firms' },
+  { src: 'https://images.unsplash.com/photo-1776219470935-fce8501b610e?auto=format&fit=crop&w=2400&q=85', label: 'Restaurants' },
+  { src: 'https://images.unsplash.com/photo-1707902665498-a202981fb5ac?auto=format&fit=crop&w=2400&q=85', label: 'Accounting' },
+  { src: 'https://images.unsplash.com/photo-1777175013391-537a48303538?auto=format&fit=crop&w=2400&q=85', label: 'Car dealerships' },
+  { src: 'https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=2400&q=85', label: 'Retail & grocery' },
 ]
 const SLIDE_MS = 4500
 
@@ -58,6 +58,7 @@ export default function Hero() {
     probe.onerror = () => {
       if (!cancelled) setShade(0.68)
     }
+    probe.crossOrigin = 'anonymous'
     probe.src = slides[index].src
     if (probe.complete && probe.naturalWidth) updateShade()
     return () => {
