@@ -85,7 +85,7 @@ export default function Hero() {
       <div className="absolute inset-0" style={{ '--hero-shade': shade }} />
 
       <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-24">
-        <motion.p
+        <motion.div
           key={slides[index].label}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -93,7 +93,7 @@ export default function Hero() {
           className="mb-4 inline-flex w-fit rounded-full border border-white/30 bg-black/30 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm"
         >
           Industries we serve · {slides[index].label}
-        </motion.p>
+        </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
