@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 const slides = [
   { src: './hero/construction.jpg', label: 'Construction' },
-  { src: 'https://images.unsplash.com/photo-1757359056339-22968344cce6?auto=format&fit=crop&w=2400&q=85', label: 'Real estate & property' },
+  { src: 'https://images.unsplash.com/photo-1772325482422-55bc8dd65662?auto=format&fit=crop&w=2400&q=85', label: 'Real estate & property' },
   { src: './hero/law.jpg', label: 'Law firms' },
   { src: 'https://images.unsplash.com/photo-1776993298422-3e8c397d0235?auto=format&fit=crop&w=2400&q=85', label: 'Restaurants' },
   { src: 'https://images.unsplash.com/photo-1767423802472-f5fd07dfdb10?auto=format&fit=crop&w=2400&q=85', label: 'Accounting' },
@@ -93,7 +93,7 @@ export default function Hero() {
           className="mb-4 inline-flex w-fit self-start rounded-full border border-white/30 bg-black/30 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm"
           style={{ alignSelf: 'flex-start' }}
         >
-          Industries we serve · {slides[index].label}
+          Industries we have served · {slides[index].label}
         </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 32 }}
