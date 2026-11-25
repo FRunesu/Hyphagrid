@@ -5,7 +5,7 @@ const slides = [
   { src: './hero/construction.jpg', label: 'Construction' },
   { src: 'https://images.unsplash.com/photo-1772325482422-55bc8dd65662?auto=format&fit=crop&w=2400&q=85', label: 'Real estate & property' },
   { src: './hero/law.jpg', label: 'Law firms' },
-  { src: 'https://images.pexels.com/photos/8229947/pexels-photo-8229947.jpeg?auto=compress&dpr=1&w=2400', label: 'Restaurants' },
+  { src: 'https://images.pexels.com/photos/30679186/pexels-photo-30679186/free-photo-of-vibrant-restaurant-interior-with-unique-decor.jpeg?auto=compress&dpr=1&w=2400', label: 'Restaurants' },
   { src: 'https://images.unsplash.com/photo-1767423802472-f5fd07dfdb10?auto=format&fit=crop&w=2400&q=85', label: 'Accounting' },
   { src: 'https://images.unsplash.com/photo-1699862345412-15a3816d01a1?auto=format&fit=crop&w=2400&q=85', label: 'Car dealerships' },
   { src: './hero/retail.jpg', label: 'Retail & grocery' },
